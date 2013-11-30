@@ -1,0 +1,46 @@
+.container {
+	overflow: hidden;
+	width: 860px;
+	margin: 0 0 20px 0;
+}
+	.left {
+		float: left;
+		width: 400px;
+		margin: 0 20px 0 0;
+	}
+	.right {
+		float: left;
+		width: 400px;
+		height: 300px;
+		border: 1px solid gray;
+		overflow: hidden;
+		padding: 10px;
+	}
+#control {
+	margin: 20px 0;
+}
+body .site_imap_anchor
+{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing:	border-box;
+	box-sizing: border-box;
+	border: 1px solid silver;
+	background-color: white;
+	min-width: 250px;
+	min-height: 150px;
+	margin: 5px 0 10px 0;
+	line-height: 0;
+	font-size: 0;
+	display: block;
+}
+body .site_ymap_anchor[imap_name] { margin-bottom: 40px; }
+body .site_ymap_anchor[imap_name]::after {
+	content: attr(imap_name);
+	padding: 5px 10px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 14px;
+	display: block;
+	height: 30px;
+	line-height: 30px;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Sample IMap plugin</title>
+	<link type="text/css" href="style.css" rel="stylesheet" />
+	<!-- connect CKEditor -->
+	<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
+	<!-- connect YandexMap API -->
+	<script type="text/javascript" src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&amp;lang=ru-RU"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="left">
+			<!-- Editable content -->
+			<div id="article">
+				<p>Test Map</p>
+				<p><em class="site_imap_anchor" data-plugin="{&quot;_name&quot;:&quot;Hello, World!&quot;,&quot;_label&quot;:&quot;Hello, %username%&quot;,&quot;_zoom&quot;:&quot;5&quot;,&quot;_lon&quot;:&quot;43.2503&quot;,&quot;_lat&quot;:&quot;76.9015&quot;,&quot;_width&quot;:&quot;300px&quot;,&quot;_height&quot;:&quot;200px&quot;}" height="200px" style="height:200px; width:300px" width="300px">MAP</em></p>
+			</div>
+		</div>
+		<!-- Preview panel -->
+		<div class="right" id="preview"></div>
+	</div>
+	<!-- Control panel -->
+	<div id="control">
+		<!-- Preview button -->
+		<input style="visibility:hidden;" type="button" id="save" value="Preview" />
+		<!-- Map-service loading indicator -->
+		<p id="loading">Loading map-service...</p>
+	</div>
+	<!-- Create editor -->
+	<script type="text/javascript">
+		window.test_editor = CKEDITOR.replace( 'article',
+		{
+			skin: 'moono',
+			enterMode: 1,
+			height: 300,
+			width: 400,
+			extraPlugins: 'imap',
+			toolbar: [ [ 'Bold', 'Italic', 'Underline', 'Strike' ], [ 'Imap', 'Source' ] ]
+		} );
+	</script>
+	<!-- Example js-connection (YandexMaps) -->
+	<script type="text/javascript" src="connect.js"></script>
+</body>
+</html>
